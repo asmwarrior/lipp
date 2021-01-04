@@ -396,7 +396,7 @@ template <class T> inline bool preprocessor<T>::include_file( string_view_t file
 	}
 
 	// Correct path separators
-	for ( size_t i = 0, S = lipp::size( buff ); i < S; ++i )
+	for ( size_t i = 0, S = lipp::size( (const char *)buff ); i < S; ++i )
 	{
 		if ( buff[i] == '\\' )
 			buff[i] = '/';
